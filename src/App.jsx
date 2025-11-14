@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { Header } from './components/Header';
 import { HomePage } from "./pages/Home";
 import Footer from "./components/Footer";
+import AboutPage from "./pages/About";
 // import { Footer } from './components/Footer';
 // import { HomePage } from './pages/HomePage';
 // import { AboutPage } from './pages/AboutPage';
@@ -17,11 +18,11 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/videos" element={<VideosPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} /> */}
+          <Route path="/about" element={<AboutPage />} />
+          {/* <Route path="/services" element={<ServicesPage />} /> */}
+          {/* <Route path="/videos" element={<VideosPage />} /> */}
+          {/* <Route path="/contact" element={<ContactPage />} /> */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
       </div>

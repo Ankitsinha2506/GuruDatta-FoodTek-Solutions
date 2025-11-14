@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import logo from '../assets/bikes.png';
+import logo from '../assets/orange.png';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
