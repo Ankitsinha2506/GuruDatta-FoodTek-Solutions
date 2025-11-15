@@ -7,7 +7,7 @@ function ContactInfo() {
     {
       icon: Phone,
       title: 'Phone Numbers',
-      details: ['9049043434', '95296 72992']
+      details: [ '9529672992', '9049043434']
     },
     {
       icon: Mail,
