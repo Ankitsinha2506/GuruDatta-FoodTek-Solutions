@@ -7,10 +7,12 @@ import AboutPage from "./pages/About";
 import ServiceHero from "./components/ServiceHero";
 import VideosPage from "./pages/VideosPage";
 import ContactPage from "./pages/ContactPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-[#FFFFF2]">
         <Header />
         <Routes>
