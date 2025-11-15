@@ -54,7 +54,7 @@ function Contact() {
       id="contact"
       className="py-20 bg-gradient-to-b from-[#FFFFF2] to-white"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 sm:px-4"> 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,16 +62,19 @@ function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl text-[#0446F2] mb-4">
+          {/* 🔥 CHANGED mobile font size */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#0446F2] mb-4">
             Contact Us
           </h2>
-          <div className="w-24 h-1 bg-[#FF9136] mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+
+          <div className="w-20 sm:w-24 h-1 bg-[#FF9136] mx-auto mb-6"></div>
+
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-2">
             Get in touch with our team to discuss your food processing needs
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -79,15 +82,18 @@ function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="p-8 shadow-xl">
-              <h3 className="text-2xl text-[#0446F2] mb-6">Send us a Message</h3>
+            {/* 🔥 CHANGED: added w-full for better responsiveness */}
+            <Card className="p-6 sm:p-8 shadow-xl w-full">
+              <h3 className="text-xl sm:text-2xl text-[#0446F2] mb-6">
+                Send us a Message
+              </h3>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <Input
                   placeholder="Your Name *"
                   value={formData.name}
                   required
-                  className="border-gray-300 focus:border-[#0446F2]"
+                  className="border-gray-300 focus:border-[#0446F2] w-full"
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
@@ -98,7 +104,7 @@ function Contact() {
                   placeholder="Email Address *"
                   value={formData.email}
                   required
-                  className="border-gray-300 focus:border-[#0446F2]"
+                  className="border-gray-300 focus:border-[#0446F2] w-full"
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
@@ -108,7 +114,7 @@ function Contact() {
                   type="tel"
                   placeholder="Phone Number"
                   value={formData.phone}
-                  className="border-gray-300 focus:border-[#0446F2]"
+                  className="border-gray-300 focus:border-[#0446F2] w-full"
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
@@ -117,7 +123,7 @@ function Contact() {
                 <Input
                   placeholder="Company Name"
                   value={formData.company}
-                  className="border-gray-300 focus:border-[#0446F2]"
+                  className="border-gray-300 focus:border-[#0446F2] w-full"
                   onChange={(e) =>
                     setFormData({ ...formData, company: e.target.value })
                   }
@@ -128,7 +134,7 @@ function Contact() {
                   value={formData.message}
                   required
                   rows={5}
-                  className="border-gray-300 focus:border-[#0446F2]"
+                  className="border-gray-300 focus:border-[#0446F2] w-full"
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
@@ -156,8 +162,10 @@ function Contact() {
             className="space-y-6"
           >
             <div>
-              <h3 className="text-2xl text-[#0446F2] mb-6">Get in Touch</h3>
-              <p className="text-gray-600 mb-8">
+              <h3 className="text-xl sm:text-2xl text-[#0446F2] mb-4 sm:mb-6">
+                Get in Touch
+              </h3>
+              <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
                 Our team of experts is ready to help you find the perfect food
                 processing solution for your business.
               </p>
@@ -171,19 +179,20 @@ function Contact() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="p-6 hover:shadow-xl transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#0446F2]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <info.icon className="text-[#0446F2]" size={24} />
+                <Card className="p-5 sm:p-6 hover:shadow-xl transition-shadow">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    {/* 🔥 CHANGED: mobile icon size fix */}
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0446F2]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <info.icon className="text-[#0446F2]" size={22} />
                     </div>
 
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-lg text-[#0446F2] mb-2">
+                      <h4 className="text-base sm:text-lg text-[#0446F2] mb-2">
                         {info.title}
                       </h4>
 
                       {info.details.map((detail) => (
-                        <p key={detail} className="text-gray-600 break-words">
+                        <p key={detail} className="text-gray-600 text-sm sm:text-base break-words">
                           {detail}
                         </p>
                       ))}
