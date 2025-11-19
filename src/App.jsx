@@ -12,7 +12,7 @@ import ScrollToTop from "./components/ScrollToTop";
 export default function App() {
   return (
     <Router>
-      <ScrollToTop />
+    <ScrollToTop />
       <div className="min-h-screen bg-[#FFFFF2]">
         <Header />
         <Routes>

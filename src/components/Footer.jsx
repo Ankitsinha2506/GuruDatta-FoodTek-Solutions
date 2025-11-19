@@ -47,11 +47,11 @@ function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-3 mb-4">
-             <img
-  src={logo}
-  alt="Gurudatta Foodtek Solutions"
-  className="w-24 h-24 object-contain"
- />
+              <img
+                src={logo}
+                alt="Gurudatta Foodtek Solutions"
+                className="w-24 h-24 object-contain"
+              />
 
               <div>
                 <h3 className="text-xl">Gurudatta Foodtek Solutions</h3>
