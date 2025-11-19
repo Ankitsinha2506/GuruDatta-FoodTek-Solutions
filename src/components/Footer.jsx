@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "../assets/orange.png";
+import logo from "../assets/gurudatta.png";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -47,11 +47,12 @@ function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <img
-                src={logo}
-                alt="Gurudatta Foodtek Solutions"
-                className="w-12 h-12 object-contain bg-white rounded-lg p-1"
-              />
+             <img
+  src={logo}
+  alt="Gurudatta Foodtek Solutions"
+  className="w-24 h-24 object-contain"
+ />
+
               <div>
                 <h3 className="text-xl">Gurudatta Foodtek Solutions</h3>
                 <p className="text-sm text-[#FFFFF2]/80">
